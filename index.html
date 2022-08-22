@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS Added-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Image Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section>
+    <div class="full-img" id="fullImgBox">
+      <img src="img1.jpg" alt="" id="fullImg">
+      <!-- <a href="img1.jpg" download class="btn2">Download</a> -->
+      <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="container">
+      <div class="img-container-grid">
+        <div class="smallsquare"><img src="img1.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+        <div class="smallsquare"><img src="img2.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+        <div class="h_rectangle"><img src="img3.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+        <div class="smallsquare"><img src="img4.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+        <div class="bigsquare"><img src="img5.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+        <div class="bigsquare_blank">
+          <div class="inner_square"><img src="img6.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+          <div class="inner_square"><img src="img7.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+          <div class="inner_square"><img src="img8.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+          <div class="inner_square"><img src="img9.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+        </div>
+        <div class="v_rectangle"><img src="img10.jpg" class="img-grid-c" onclick="openFullImg(this.src)"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic) {
+      fullImgBox.style.display = "flex";
+      fullImg.src = pic;
+      
+    }
+
+    function closeFullImg() {
+      fullImgBox.style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
